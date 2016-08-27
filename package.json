@@ -15,7 +15,8 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "prestart": "npm prune && npm install",
-    "start": "gulp"
+    "prestart": "bower install",
+    "start": "npm prune && npm install",
+    "poststart": "gulp"
   }
 }
