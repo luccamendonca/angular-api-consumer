@@ -7,7 +7,8 @@
   SimpleFormController.$inject = ['$rootScope', '$scope', 'UserModel'];
   function SimpleFormController($rootScope, $scope, UserModel) {
 
-    $scope.form = UserModel.getFormStructure();
+    $scope.showSummary = false;
+    $scope.form        = UserModel.getFormStructure();
 
   };
 })();

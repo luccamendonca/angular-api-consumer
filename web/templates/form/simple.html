@@ -1,7 +1,22 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row page-title">
     <div class="col-sm-12">
       <h2>Simple user form</h2>
+
+      <button type="button"
+              class="btn pull-right"
+              ng-class="{'btn-success': !showSummary, 'btn-default': showSummary}"
+              ng-click="showSummary = !showSummary">
+        {{ showSummary ? 'Hide' : 'Show' }} user summary
+      </button>
+
+      <p>
+        Here we have a (very) simple form, to show the power of a Controller's $scope.
+        <br />
+        If you already have filled any of the fields, you may click on the "Show user summary" button
+        <br />
+        to see a styled summary appearing on the second half of the page.
+      </p>
     </div>
   </div>
   <hr>
@@ -13,7 +28,7 @@
     </div>
 
     <!-- User summary -->
-    <div class="col-sm-6">
+    <div class="col-sm-6" ng-show="showSummary">
       <ng-include src="'templates/form/user_summary.html'"></ng-include>
     </div>
   </div>

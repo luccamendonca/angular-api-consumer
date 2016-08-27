@@ -1,0 +1,7 @@
+.row.page-title h2 {
+  display: inline-block;
+}
+
+.row.page-title button.pull-right {
+  margin-top: 20px;
+}
