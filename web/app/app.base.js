@@ -6,6 +6,8 @@ angular.module('app', [
   'ngResource',
   'app.home',
   'app.lists',
+  'app.form.simple',
+  'app.user'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
@@ -15,9 +17,13 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     templateUrl: 'templates/home/home.html',
     controller: 'HomeController'
   })
-  .when('/posts', {
-    templateUrl: 'templates/lists/posts.html',
-    controller: 'PostListController'
+  .when('/form-simple', {
+    templateUrl: 'templates/form/simple.html',
+    controller: 'SimpleFormController'
+  })
+  .when('/list-simple', {
+    templateUrl: 'templates/lists/simple.html',
+    controller: 'SimpleListController'
   });
 
 }]);

@@ -2,10 +2,10 @@
 'use strict';
 
   var postListController =  angular.module('app.lists');
-  postListController.controller('PostListController', PostListController);
+  postListController.controller('SimpleListController', SimpleListController);
 
-  PostListController.$inject = ['$rootScope', '$scope', 'ListsModel'];
-  function PostListController($rootScope, $scope, ListsModel) {
+  SimpleListController.$inject = ['$rootScope', '$scope', 'ListsModel'];
+  function SimpleListController($rootScope, $scope, ListsModel) {
     $scope.model = ListsModel;
 
     // Scope properties

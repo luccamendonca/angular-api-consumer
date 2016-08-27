@@ -1,0 +1,21 @@
+<h2>{{form.name}}</h2>
+<p ng-show="0 < form.username.length">Username: {{form.username}}</p>
+<p ng-show="0 < form.email.length">E-mail: {{form.email}}</p>
+<p ng-show="0 < form.phone.length">Phone: {{form.phone}}</p>
+<p ng-show="0 < form.website.length">Website: {{form.website}}</p>
+
+<div ng-show="0 < form.address.street.length">
+  <hr>
+  <h4>Address</h4>
+
+  <p>{{form.address.street}}, {{form.address.suite}} - {{form.address.city}} ({{form.address.zipcode}})</p>
+</div>
+
+<div ng-show="0 < form.company.name.length">
+  <hr>
+  <h4>Company</h4>
+
+  <p ng-show="0 < form.company.name.length">Name: {{form.company.name}}</p>
+  <p ng-show="0 < form.company.catchPhrase.length">Catch Phrase: {{form.company.catchPhrase}}</p>
+  <p ng-show="0 < form.company.bs.length">BS: {{form.company.bs}}</p>
+</div>

@@ -2,15 +2,29 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h2>Post list</h2>
+      <h2>Simple list</h2>
+      <p>
+        This is pretty much the simplest you can get to list stuff using AngularJS.
+        <br />
+        By clicking on "Populate List", the app will make a GET request to
+        <a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a> and fetch the full 100 post list.
+        <br />
+        Also, here we have a simple filter per column, that uses AngularJS' "| filter:{}" functionality.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
       <button type="button" class="btn btn-success" ng-click="fetchPosts()">
-        Fetch posts
+        Populate List
       </button>
       <button type="button" class="btn btn-default" ng-click="clearList()">
-        Clear list
+        Clear List
       </button>
     </div>
   </div>
+
   <hr>
 
   <div class="row">
