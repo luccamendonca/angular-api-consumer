@@ -4,7 +4,8 @@
       <h2>User list and form <span class="small">(editing an user)</span></h2>
       <button type="button"
               class="btn btn-labeled btn-default pull-right"
-              ng-click="cancelUserEdit()">
+              ng-click="cancelUserEdit()"
+              ng-show="editMode">
         <span class="btn-label">
             <i class="fa fa-close"></i>
         </span>
