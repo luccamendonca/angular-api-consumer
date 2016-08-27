@@ -1,0 +1,12 @@
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+web/bower_components/
+web/assets/app.css
+web/app.min.css
+web/app.min.js
+web/app/app.js
+tmp
+.DS_Store
+.idea

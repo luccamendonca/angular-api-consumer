@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Post list</h2>
+      <button type="button" class="btn btn-success" ng-click="fetchPosts()">
+        Fetch posts
+      </button>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-condensed table-hover">
+          <thead>
+              <td ng-repeat="field in postStructure track by $index">
+                  {{field.label}} <br />
+                  <input type="text" class="form-control" ng-model="tableFilter[field.name]">
+              </td>
+          </thead>
+          <tbody>
+            <tr ng-repeat="post in allPosts | filter:tableFilter">
+              <td ng-repeat="field in postStructure">
+                  {{post[field.name]}}
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <td ng-repeat="field in postStructure track by $index">
+                  {{field.label}}
+              </td>
+          </tfoot>
+      </table>
+    </div>
+  </div>
+</div>

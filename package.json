@@ -1,0 +1,21 @@
+{
+  "name": "angular-api-consumer",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Project for a simple AngularJS single-page api consumer",
+  "repository": "",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "~2.6.*",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.2",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "prestart": "npm prune && npm install",
+    "start": "gulp"
+  }
+}
