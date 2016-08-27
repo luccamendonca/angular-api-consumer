@@ -50,7 +50,7 @@ function buildJS() {
 
 function minifyJS() {
   gulp.src(angularBasePath + '/app.js')
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(projectBasePath));
 }

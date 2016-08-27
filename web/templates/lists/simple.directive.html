@@ -1,0 +1,50 @@
+<hr>
+
+<div class="row">
+  <div class="col-sm-12">
+    <button type="button"
+            class="btn btn-labeled btn-default"
+            ng-click="listFilter = {}">
+      <span class="btn-label">
+          <i class="fa fa-close"></i>
+      </span>
+      Clear filters
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-condensed table-hover">
+      <thead>
+        <td ng-repeat="field in fieldMap track by $index">
+          {{field.label}} <br />
+          <input type="text" class="form-control" ng-model="listFilter[field.name]">
+        </td>
+        <td ng-if="showActions">Actions</td>
+      </thead>
+      <tbody>
+        <tr ng-repeat="entity in entityList | filter:listFilter">
+          <td ng-repeat="field in fieldMap">
+            {{entity[field.name]}}
+          </td>
+          <td ng-if="showActions">
+            <button type="button"
+                    class="btn btn-labeled btn-primary btn-xs"
+                    ng-click="editCallback({entityId: entity.id})">
+              <span class="btn-label">
+                  <i class="fa fa-edit"></i>
+              </span>
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td ng-repeat="field in fieldMap track by $index">
+          {{field.label}}
+        </td>
+      </tfoot>
+    </table>
+  </div>
+</div>

@@ -16,6 +16,7 @@
     "angular-bootstrap": "^2.1.3",
     "font-awesome": "^4.6.3",
     "angular-trix": "^1.0.2",
-    "angular-validation-ghiscoding": "^1.5.4"
+    "angular-validation-ghiscoding": "^1.5.4",
+    "angular-ui-router": "^0.3.1"
   }
 }

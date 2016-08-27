@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AngularJS simple API consumer</title>
+  <title>{{$state.current.title}}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="app.min.css">
 </head>
 <body>
@@ -32,17 +33,20 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li>
-            <a href="/#/home">Home</a>
+        <li ng-class="{'active': 'home' === $state.current.name}">
+            <a ui-sref="home">Home</a>
         </li>
-        <li>
-            <a href="/#/form-simple">Simple Form</a>
+        <li ng-class="{'active': 'simpleForm' === $state.current.name}">
+            <a ui-sref="simpleForm">Simple Form</a>
         </li>
-        <li>
-            <a href="/#/list-simple">Simple List</a>
+        <li ng-class="{'active': 'simpleList' === $state.current.name}">
+            <a ui-sref="simpleList">Simple List</a>
         </li>
-        <li>
-            <a href="/#/editor">WYSIWYG Editor</a>
+        <li ng-class="{'active': 'userForm' === $state.current.name}">
+            <a ui-sref="userForm">User List & Form (edit)</a>
+        </li>
+        <li ng-class="{'active': 'textEditor' === $state.current.name}">
+            <a ui-sref="textEditor">WYSIWYG Editor</a>
         </li>
       </ul>
     </div>
@@ -50,13 +54,13 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
-            <div ng-view></div>
+            <div ui-view></div>
 
             <hr>
             <div class="row">
               <div class="col-sm-12">
                 <footer>
-                  <p>&copy; 2016 Company, Inc.</p>
+                  <p>Created by <a href="https://github.com/luccamendonca">Lucca Mendonça</a></p>
                 </footer>
               </div>
             </div>
@@ -70,6 +74,7 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
   <script src="/app.min.js"></script>
 </body>
