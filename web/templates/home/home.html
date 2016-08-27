@@ -1,4 +1,3 @@
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
     <h1>Hello, world!</h1>
@@ -9,21 +8,37 @@
 <div class="container-fluid">
   <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div class="col-md-3">
+      <h2>Simple Form</h2>
+      <p>
+        Here we have a (very) simple form, to show the power of a Controller's $scope.
+        If you already have filled any of the fields, you may click on the "Show user summary" button
+        to see a styled summary appearing on the second half of the page.
+      </p>
+      <p>
+        <a class="btn btn-default" ui-sref="simpleForm" role="button">View details &raquo;</a>
+      </p>
     </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-   </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div class="col-md-3">
+      <h2>Simple List/Filter</h2>
+      <p>
+        This is pretty much the simplest you can get to list stuff using AngularJS.
+        By clicking on "Populate List", the app will make a GET request to
+        <a href="https://jsonplaceholder.typicode.com/posts">jsonplaceholder/posts</a> and fetch the full 100 post list.
+        Also, here we have a simple filter per column, that uses AngularJS' "| filter:{}" functionality.
+      </p>
+      <p>
+        <a class="btn btn-default" ui-sref="simpleList" role="button">View details &raquo;</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <h2>User "CRUD"</h2>
+      <p>
+        Here we have a user list, with the filters working the same way we have on <a href="" ui-sref="simpleList">Simple List</a>, although now you'll be able to "Edit" an User. For that, we're using URL parameters and we fetch the user by id on-demand.
+      </p>
+      <p>
+        <a class="btn btn-default" ui-sref="userForm" role="button">View details &raquo;</a>
+      </p>
     </div>
   </div>
-
 </div> <!-- /container -->
