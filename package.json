@@ -15,7 +15,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "prestart": "bower install",
+    "prestart": "bower --allow-root install",
     "start": "npm prune && npm install",
     "poststart": "gulp"
   }

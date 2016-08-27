@@ -15,6 +15,7 @@
 
     // Scope method assignment
     $scope.fetchPosts = fetchPosts;
+    $scope.clearList  = clearList;
 
     function fetchPosts(userId) {
       $scope.model.fetchAllPosts(userId)
@@ -27,6 +28,11 @@
           console.log(error);
         }
       );
+    };
+
+    function clearList() {
+      $scope.allPosts    = [];
+      $scope.tableFilter = {};
     };
 
   };
