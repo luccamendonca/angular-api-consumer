@@ -1,0 +1,8 @@
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li ng-repeat="(key, item) in sidebarStructure"
+        ng-class="{'active': item.state === $state.current.name}">
+      <a ui-sref="{{item.state}}">{{item.title}}</a>
+    </li>
+  </ul>
+</div>

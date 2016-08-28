@@ -52,11 +52,30 @@ function routesConfig($routeProvider, $stateProvider) {
   );
 }
 
-
 app.run(appRun);
-appRun.$inject = ['$rootScope', '$state', '$stateParams'];
+appRun.$inject = ['$rootScope', '$state', '$stateParams', 'Sidebar'];
 
-function appRun($rootScope, $state, $stateParams) {
+function appRun($rootScope, $state, $stateParams, Sidebar) {
   $rootScope.$state = $state;
   $rootScope.currentYear = (new Date()).getFullYear();
+  $rootScope.sidebarStructure = Sidebar.getStructure();
+}
+
+app.factory('Sidebar', Sidebar);
+Sidebar.$inject = [];
+
+function Sidebar() {
+  var self = this;
+
+  self.getStructure = function () {
+    return [
+      {state: 'home', title: 'Home'},
+      {state: 'simpleForm', title: 'Simple Form'},
+      {state: 'simpleList', title: 'Simple List'},
+      {state: 'userForm', title: 'User "CRUD"'},
+      {state: 'textEditor', title: 'WYSIWYG Editor'}
+    ];
+  };
+
+  return self;
 }
