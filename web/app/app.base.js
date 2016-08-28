@@ -5,6 +5,7 @@ var app = angular.module('app', [
   'ngRoute',
   'ngResource',
   'textAngular',
+  'ghiscoding.validation',
   'ui.router',
   'app.home',
   'app.lists',

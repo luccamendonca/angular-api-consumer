@@ -18,8 +18,17 @@
     ];
     $scope.limit      = 5;
     $scope.entityList = [];
+
     // Scope method assignment
     $scope.fetchAll = fetchAll;
+    $scope.addTodo  = addTodo;
+
+    function addTodo() {
+      $scope.entityList.unshift({
+        title: '',
+        completed: false
+      });
+    };
 
     function fetchAll() {
       $scope.model.fetchAll()

@@ -20,6 +20,15 @@
       <select class="form-control" ng-options="limit.value as limit.label for limit in limitRange" ng-model="limit">
       </select>
     </div>
+
+    <div class="col-sm-2">
+      <button class="btn btn-success btn-labeled" ng-click="addTodo()">
+        <span class="btn-label">
+          <i class="fa fa-plus"></i>
+        </span>
+        Add to-do
+      </button>
+    </div>
   </div>
 
   <hr>

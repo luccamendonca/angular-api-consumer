@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" name="userForm" novalidate>
   <fieldset id="person-info">
     <legend>Person</legend>
     <!-- NAME -->
@@ -8,6 +8,8 @@
         <input type="text"
                class="form-control"
                id="user-name"
+               name="user[name]"
+               validation="required"
                ng-model="form.name">
       </div>
     </div>
@@ -19,6 +21,8 @@
         <input type="text"
                class="form-control"
                id="user-username"
+               name="user[username]"
+               validation="required"
                ng-model="form.username">
       </div>
     </div>
@@ -30,6 +34,8 @@
         <input type="email"
                class="form-control"
                id="user-email"
+               name="user[email]"
+               validation="required"
                ng-model="form.email">
       </div>
     </div>
@@ -41,6 +47,8 @@
         <input type="text"
                class="form-control"
                id="user-phone"
+               name="user[phone]"
+               validation="required"
                ng-model="form.phone">
       </div>
     </div>
@@ -52,6 +60,8 @@
         <input type="text"
                class="form-control"
                id="user-website"
+               name="user[website]"
+               validation="required"
                ng-model="form.website">
       </div>
     </div>
@@ -66,6 +76,8 @@
         <input type="text"
                class="form-control"
                id="user-address-street"
+               name="user[address][street]"
+               validation="required"
                ng-model="form.address.street">
       </div>
     </div>
@@ -76,6 +88,7 @@
         <input type="text"
                class="form-control"
                id="user-address-suite"
+               name="user[address][suite]"
                ng-model="form.address.suite">
       </div>
     </div>
@@ -86,6 +99,8 @@
         <input type="text"
                class="form-control"
                id="user-address-city"
+               name="user[address][city]"
+               validation="required"
                ng-model="form.address.city">
       </div>
     </div>
@@ -96,6 +111,8 @@
         <input type="text"
                class="form-control"
                id="user-address-zipcode"
+               name="user[address][zipcode]"
+               validation="required"
                ng-model="form.address.zipcode">
       </div>
     </div>
@@ -110,6 +127,8 @@
         <input type="text"
                class="form-control"
                id="user-company-name"
+               name="user[company][name]"
+               validation="required"
                ng-model="form.company.name">
       </div>
     </div>
@@ -120,6 +139,8 @@
         <input type="text"
                class="form-control"
                id="user-company-catchPhrase"
+               name="user[company][catchPhrase]"
+               validation="required"
                ng-model="form.company.catchPhrase">
       </div>
     </div>
@@ -130,6 +151,8 @@
         <input type="text"
                class="form-control"
                id="user-company-catchPhrase"
+               name="user[company][catchPhrase]"
+               validation="required"
                ng-model="form.company.catchPhrase">
       </div>
     </div>
