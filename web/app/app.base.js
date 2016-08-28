@@ -4,12 +4,14 @@
 var app = angular.module('app', [
   'ngRoute',
   'ngResource',
+  'textAngular',
   'ui.router',
   'app.home',
   'app.lists',
   'app.form.simple',
   'app.user',
   'app.todo_list',
+  'app.text_editor',
 ]);
 
 app.config(routesConfig);
@@ -57,6 +59,14 @@ function routesConfig($routeProvider, $stateProvider) {
       title: 'To-do List',
       controller: 'TodoListController',
       templateUrl: 'templates/todo_list/simple.html'
+    }
+  )
+  .state(
+    'textEditor', {
+      url: '/text-editor',
+      title: 'WYSIWYG Text Editor',
+      controller: 'TextEditorController',
+      templateUrl: 'templates/text_editor/simple.html'
     }
   );
 }

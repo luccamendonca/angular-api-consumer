@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+  <div class="row page-title">
+    <div class="col-sm-12">
+      <h2>WYSIWYG Text Editor</h2>
+      <p>
+        Here we have a full WYSIWYG editor, using the <a href="https://github.com/fraywing/textAngular">Text Angular</a> plugin.
+        <br />
+        You can see the Resulting HTML on the textarea under the editor.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <text-angular ng-model="editorContent"></text-angular>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Editor result</h3>
+      <textarea class="form-control" rows="20" ng-model="editorContent"></textarea>
+    </div>
+  </div>
+
+</div>
