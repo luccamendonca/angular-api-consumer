@@ -8,7 +8,8 @@ var app = angular.module('app', [
   'app.home',
   'app.lists',
   'app.form.simple',
-  'app.user'
+  'app.user',
+  'app.todo_list',
 ]);
 
 app.config(routesConfig);
@@ -49,6 +50,14 @@ function routesConfig($routeProvider, $stateProvider) {
       controller: 'UserListController',
       templateUrl: 'templates/lists/user_form_and_list.html'
     }
+  )
+  .state(
+    'todoList', {
+      url: '/todo',
+      title: 'To-do List',
+      controller: 'TodoListController',
+      templateUrl: 'templates/todo_list/simple.html'
+    }
   );
 }
 
@@ -73,6 +82,7 @@ function Sidebar() {
       {state: 'simpleForm', title: 'Simple Form'},
       {state: 'simpleList', title: 'Simple List'},
       {state: 'userForm', title: 'User "CRUD"'},
+      {state: 'todoList', title: 'Simple To-do List'},
       {state: 'textEditor', title: 'WYSIWYG Editor'}
     ];
   };

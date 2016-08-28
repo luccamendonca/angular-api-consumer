@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+  <div class="row page-title">
+    <div class="col-sm-12">
+      <h2>To-do List</h2>
+      <p>
+        An example of how to implement a to-do list using AngularJS.
+        <br />
+        By changing the select, the "limit" value will be changed on the $scope, also changing the "limitTo" filter value.
+        <br />
+        All of the data is provided by <a href="https://jsonplaceholder.typicode.com">jsonplaceholder</a>.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-4 col-md-2 col-lg-1">
+      <select class="form-control" ng-options="limit.value as limit.label for limit in limitRange" ng-model="limit">
+      </select>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <form class="form-horizontal">
+        <div class="form-group col-sm-12"
+             ng-repeat="(key, value) in (entityList | limitTo:limit)">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <input type="checkbox" ng-model="entityList[key].completed">
+            </span>
+            <input type="text"
+                   class="form-control"
+                   ng-model="entityList[key].title"
+                   ng-disabled="1 == entityList[key].completed"/>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
