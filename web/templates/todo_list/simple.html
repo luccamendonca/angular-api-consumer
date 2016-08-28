@@ -35,6 +35,7 @@
             </span>
             <input type="text"
                    class="form-control"
+                   ng-class="{'todo-completed': 1 == entityList[key].completed}"
                    ng-model="entityList[key].title"
                    ng-disabled="1 == entityList[key].completed"/>
           </div>
